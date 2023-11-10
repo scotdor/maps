@@ -10,13 +10,13 @@
 <body>
 <p>hello</p>
 <!-- Your map will go here -->
-<div id="map" style="width: 400px; height: 300px;"></div>
+<div id="map" style="width: 800px; height: 600px;"></div>
 <script>
     mapboxgl.accessToken = 'pk.eyJ1Ijoic2NvdGRvciIsImEiOiJjaW9jYmJweWQwNDk1dnpsejk2NTVkMGl5In0.kN5SGGVrADypO52rNEh8bg';
     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v11',
-        center: [41.448973, -81.677039], // starting position [lng, lat]
+        center: [-81.677039, 41.448973], // starting position [lng, lat]
         zoom: 9 // starting zoom
     });
 </script>

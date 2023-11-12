@@ -39,6 +39,26 @@
                     'line-width': 5 // Set the line width
                 }
             });
+			
+			map.addSource('route2', {
+                type: 'geojson',
+                data: 'Slow_Roll_CLE_Wade_Oval_10_23.geojson' // Replace with the name of your GeoJSON file
+            });
+
+            // Add a layer to visualize the route
+            map.addLayer({
+                id: 'route2',
+                type: 'line',
+                source: 'route2',
+                layout: {
+                    'line-join': 'round',
+                    'line-cap': 'round'
+                },
+                paint: {
+                    'line-color': '#c74408', // Choose a color for the route
+                    'line-width': 5 // Set the line width
+                }
+            });
         });
 </script>
 </body>

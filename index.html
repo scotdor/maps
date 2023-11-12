@@ -16,7 +16,7 @@
         container: 'map',
         style: 'mapbox://styles/scotdor/clot1vbzq00kg01ns4wvd1921',
         center: [-81.677039, 41.448973], // starting position [lng, lat]
-        zoom: 10 // starting zoom
+        zoom: 15 // starting zoom
     });
 	map.on('load', function () {
             // Add a new source from our GeoJSON data
@@ -76,6 +76,25 @@
                 },
                 paint: {
                     'line-color': '#0e9925', // Choose a color for the route
+                    'line-width': 5 // Set the line width
+                }
+            });
+			map.addSource('route4', {
+                type: 'geojson',
+                data: 'Old_Brooklyn_9_25.geojson' // Replace with the name of your GeoJSON file
+            });
+
+            // Add a layer to visualize the route
+            map.addLayer({
+                id: 'route4',
+                type: 'line',
+                source: 'route4',
+                layout: {
+                    'line-join': 'round',
+                    'line-cap': 'round'
+                },
+                paint: {
+                    'line-color': '#6e0d5f', // Choose a color for the route
                     'line-width': 5 // Set the line width
                 }
             });

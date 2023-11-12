@@ -18,6 +18,28 @@
         center: [-81.677039, 41.448973], // starting position [lng, lat]
         zoom: 9 // starting zoom
     });
+	map.on('load', function () {
+            // Add a new source from our GeoJSON data
+            map.addSource('route1', {
+                type: 'geojson',
+                data: 'Halloween_10_30.geojson' // Replace with the name of your GeoJSON file
+            });
+
+            // Add a layer to visualize the route
+            map.addLayer({
+                id: 'route1',
+                type: 'line',
+                source: 'route1',
+                layout: {
+                    'line-join': 'round',
+                    'line-cap': 'round'
+                },
+                paint: {
+                    'line-color': '#1DB7DD', // Choose a color for the route
+                    'line-width': 5 // Set the line width
+                }
+            });
+        });
 </script>
 </body>
 </html>

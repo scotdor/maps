@@ -198,6 +198,46 @@
                     'line-width': 5 // Set the line width
                 }
             });
+			
+			map.addSource('route10', {
+                type: 'geojson',
+                data: 'Glenville_07_31.geojson' // Replace with the name of your GeoJSON file
+            });
+
+            // Add a layer to visualize the route
+            map.addLayer({
+                id: 'route10',
+                type: 'line',
+                source: 'route10',
+                layout: {
+                    'line-join': 'round',
+                    'line-cap': 'round'
+                },
+                paint: {
+                    'line-color': '#e8aeca', // Choose a color for the route
+                    'line-width': 5 // Set the line width
+                }
+            });
+			
+			map.addSource('route11', {
+                type: 'geojson',
+                data: 'Clark_Fulton_07_24.geojson' // Replace with the name of your GeoJSON file
+            });
+
+            // Add a layer to visualize the route
+            map.addLayer({
+                id: 'route11',
+                type: 'line',
+                source: 'route11',
+                layout: {
+                    'line-join': 'round',
+                    'line-cap': 'round'
+                },
+                paint: {
+                    'line-color': '#7cbd0d', // Choose a color for the route
+                    'line-width': 5 // Set the line width
+                }
+            });
         });
 </script>
 </body>

@@ -278,6 +278,46 @@
                     'line-width': 5 // Set the line width
                 }
             });
+			
+			map.addSource('route14', {
+                type: 'geojson',
+                data: 'Slavic_Village_07_01.geojson' // Replace with the name of your GeoJSON file
+            });
+
+            // Add a layer to visualize the route
+            map.addLayer({
+                id: 'route14',
+                type: 'line',
+                source: 'route14',
+                layout: {
+                    'line-join': 'round',
+                    'line-cap': 'round'
+                },
+                paint: {
+                    'line-color': '#06bf9d', // Choose a color for the route
+                    'line-width': 5 // Set the line width
+                }
+            });
+			
+			map.addSource('route15', {
+                type: 'geojson',
+                data: 'Whiskey_Island_06_26.geojson' // Replace with the name of your GeoJSON file
+            });
+
+            // Add a layer to visualize the route
+            map.addLayer({
+                id: 'route15',
+                type: 'line',
+                source: 'route15',
+                layout: {
+                    'line-join': 'round',
+                    'line-cap': 'round'
+                },
+                paint: {
+                    'line-color': '#452909', // Choose a color for the route
+                    'line-width': 5 // Set the line width
+                }
+            });
         });
 </script>
 </body>

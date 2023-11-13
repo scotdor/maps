@@ -158,6 +158,45 @@
                     'line-width': 5 // Set the line width
                 }
             });
+			
+			map.addSource('route8', {
+                type: 'geojson',
+                data: 'Lee_Harvard_08_21.geojson' // Replace with the name of your GeoJSON file
+            });
+
+            // Add a layer to visualize the route
+            map.addLayer({
+                id: 'route8',
+                type: 'line',
+                source: 'route8',
+                layout: {
+                    'line-join': 'round',
+                    'line-cap': 'round'
+                },
+                paint: {
+                    'line-color': '#0d0db8', // Choose a color for the route
+                    'line-width': 5 // Set the line width
+                }
+            });
+			
+			map.addSource('route9', {
+                type: 'geojson',
+                data: 'Lee_Harvard_08_21Voinovich_Park_08_05
+
+            // Add a layer to visualize the route
+            map.addLayer({
+                id: 'route9',
+                type: 'line',
+                source: 'route9',
+                layout: {
+                    'line-join': 'round',
+                    'line-cap': 'round'
+                },
+                paint: {
+                    'line-color': '#851005', // Choose a color for the route
+                    'line-width': 5 // Set the line width
+                }
+            });
         });
 </script>
 </body>

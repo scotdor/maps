@@ -358,6 +358,46 @@
                     'line-width': 5 // Set the line width
                 }
             });
+			
+			map.addSource('route18', {
+                type: 'geojson',
+                data: 'Detroit-Shoreway_06_05.geojson' // Replace with the name of your GeoJSON file
+            });
+
+            // Add a layer to visualize the route
+            map.addLayer({
+                id: 'route18',
+                type: 'line',
+                source: 'route18',
+                layout: {
+                    'line-join': 'round',
+                    'line-cap': 'round'
+                },
+                paint: {
+                    'line-color': '#2cb874', // Choose a color for the route
+                    'line-width': 5 // Set the line width
+                }
+            });
+			
+			map.addSource('route19', {
+                type: 'geojson',
+                data: 'Kirtland_Park_05_22.geojson' // Replace with the name of your GeoJSON file
+            });
+
+            // Add a layer to visualize the route
+            map.addLayer({
+                id: 'route19',
+                type: 'line',
+                source: 'route19',
+                layout: {
+                    'line-join': 'round',
+                    'line-cap': 'round'
+                },
+                paint: {
+                    'line-color': '#4500c4', // Choose a color for the route
+                    'line-width': 5 // Set the line width
+                }
+            });
         });
 </script>
 </body>

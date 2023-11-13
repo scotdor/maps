@@ -118,6 +118,46 @@
                     'line-width': 5 // Set the line width
                 }
             });
+			
+			map.addSource('route6', {
+                type: 'geojson',
+                data: 'Opportunity_Corridor_09_11.geojson' // Replace with the name of your GeoJSON file
+            });
+
+            // Add a layer to visualize the route
+            map.addLayer({
+                id: 'route6',
+                type: 'line',
+                source: 'route6',
+                layout: {
+                    'line-join': 'round',
+                    'line-cap': 'round'
+                },
+                paint: {
+                    'line-color': '#cced0e', // Choose a color for the route
+                    'line-width': 5 // Set the line width
+                }
+            });
+			
+			map.addSource('route7', {
+                type: 'geojson',
+                data: 'Jefferson_Park_08_28.geojson' // Replace with the name of your GeoJSON file
+            });
+
+            // Add a layer to visualize the route
+            map.addLayer({
+                id: 'route7',
+                type: 'line',
+                source: 'route7',
+                layout: {
+                    'line-join': 'round',
+                    'line-cap': 'round'
+                },
+                paint: {
+                    'line-color': '#fa6c00', // Choose a color for the route
+                    'line-width': 5 // Set the line width
+                }
+            });
         });
 </script>
 </body>

@@ -181,7 +181,8 @@
 			
 			map.addSource('route9', {
                 type: 'geojson',
-                data: 'Lee_Harvard_08_21Voinovich_Park_08_05
+                data: 'Voinovich_Park_08_05.geojson' // Replace with the name of your GeoJSON file
+            });
 
             // Add a layer to visualize the route
             map.addLayer({
@@ -193,7 +194,7 @@
                     'line-cap': 'round'
                 },
                 paint: {
-                    'line-color': '#851005', // Choose a color for the route
+                    'line-color': '#0d0db8', // Choose a color for the route
                     'line-width': 5 // Set the line width
                 }
             });

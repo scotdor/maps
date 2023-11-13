@@ -238,6 +238,46 @@
                     'line-width': 5 // Set the line width
                 }
             });
+			
+			map.addSource('route12', {
+                type: 'geojson',
+                data: 'Kamms_07_19.geojson' // Replace with the name of your GeoJSON file
+            });
+
+            // Add a layer to visualize the route
+            map.addLayer({
+                id: 'route12',
+                type: 'line',
+                source: 'route12',
+                layout: {
+                    'line-join': 'round',
+                    'line-cap': 'round'
+                },
+                paint: {
+                    'line-color': '#b0050e', // Choose a color for the route
+                    'line-width': 5 // Set the line width
+                }
+            });
+			
+			map.addSource('route13', {
+                type: 'geojson',
+                data: 'Waterloo_Arts_District_07_10.geojson' // Replace with the name of your GeoJSON file
+            });
+
+            // Add a layer to visualize the route
+            map.addLayer({
+                id: 'route13',
+                type: 'line',
+                source: 'route13',
+                layout: {
+                    'line-join': 'round',
+                    'line-cap': 'round'
+                },
+                paint: {
+                    'line-color': '#b0050e', // Choose a color for the route
+                    'line-width': 5 // Set the line width
+                }
+            });
         });
 </script>
 </body>

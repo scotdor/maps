@@ -314,7 +314,47 @@
                     'line-cap': 'round'
                 },
                 paint: {
-                    'line-color': '#452909', // Choose a color for the route
+                    'line-color': '#968066', // Choose a color for the route
+                    'line-width': 5 // Set the line width
+                }
+            });
+			
+			map.addSource('route16', {
+                type: 'geojson',
+                data: 'Juneteenth_06_19.geojson' // Replace with the name of your GeoJSON file
+            });
+
+            // Add a layer to visualize the route
+            map.addLayer({
+                id: 'route16',
+                type: 'line',
+                source: 'route16',
+                layout: {
+                    'line-join': 'round',
+                    'line-cap': 'round'
+                },
+                paint: {
+                    'line-color': '#966fa6', // Choose a color for the route
+                    'line-width': 5 // Set the line width
+                }
+            });
+			
+			map.addSource('route17', {
+                type: 'geojson',
+                data: 'Skidmark_Garage_06_12.geojson' // Replace with the name of your GeoJSON file
+            });
+
+            // Add a layer to visualize the route
+            map.addLayer({
+                id: 'route17',
+                type: 'line',
+                source: 'route17',
+                layout: {
+                    'line-join': 'round',
+                    'line-cap': 'round'
+                },
+                paint: {
+                    'line-color': '#fff700', // Choose a color for the route
                     'line-width': 5 // Set the line width
                 }
             });

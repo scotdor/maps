@@ -398,6 +398,66 @@
                     'line-width': 5 // Set the line width
                 }
             });
+			
+			map.addSource('route20', {
+                type: 'geojson',
+                data: 'Tremont_05_15.geojson' // Replace with the name of your GeoJSON file
+            });
+
+            // Add a layer to visualize the route
+            map.addLayer({
+                id: 'route20',
+                type: 'line',
+                source: 'route20',
+                layout: {
+                    'line-join': 'round',
+                    'line-cap': 'round'
+                },
+                paint: {
+                    'line-color': '#edc479', // Choose a color for the route
+                    'line-width': 5 // Set the line width
+                }
+            });
+			
+			map.addSource('route21', {
+                type: 'geojson',
+                data: 'Gordon_Park_05_08.geojson' // Replace with the name of your GeoJSON file
+            });
+
+            // Add a layer to visualize the route
+            map.addLayer({
+                id: 'route21',
+                type: 'line',
+                source: 'route21',
+                layout: {
+                    'line-join': 'round',
+                    'line-cap': 'round'
+                },
+                paint: {
+                    'line-color': '#2b70b5', // Choose a color for the route
+                    'line-width': 5 // Set the line width
+                }
+            });
+			
+			map.addSource('route22', {
+                type: 'geojson',
+                data: 'Edgewater_04_29.geojson' // Replace with the name of your GeoJSON file
+            });
+
+            // Add a layer to visualize the route
+            map.addLayer({
+                id: 'route22',
+                type: 'line',
+                source: 'route22',
+                layout: {
+                    'line-join': 'round',
+                    'line-cap': 'round'
+                },
+                paint: {
+                    'line-color': '#cc6a9e', // Choose a color for the route
+                    'line-width': 5 // Set the line width
+                }
+            });
         });
 </script>
 </body>
